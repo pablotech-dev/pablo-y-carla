@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO (web privada: noindex) ===== -->
+  <title>Una carta para Carla · Pablo y Carla</title>
+  <meta name="description" content="La carta de Pablo para Carla por nuestro primer año juntos. Ábrela despacio. O rápido, que te conozco.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://[DOMINIO]/carta.html">
+  <meta name="theme-color" content="#F7B6C8">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Una carta para Carla">
+  <meta property="og:description" content="Ábrela despacio. O rápido, que te conozco.">
+  <meta property="og:url" content="https://[DOMINIO]/carta.html">
+  <meta property="og:image" content="https://[DOMINIO]/fotos/foto-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Una carta para Carla">
+  <meta name="twitter:description" content="Ábrela despacio. O rápido, que te conozco.">
+  <meta name="twitter:image" content="https://[DOMINIO]/fotos/foto-01.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8C%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('pc-desbloqueado') === '1') document.documentElement.classList.add('desbloqueado'); } catch (e) {}
+  </script>
+  <noscript><style>.candado{display:none!important}</style></noscript>
+  <script src="script.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Una carta para Carla",
+    "url": "https://[DOMINIO]/carta.html",
+    "inLanguage": "es-ES",
+    "isPartOf": { "@type": "WebSite", "name": "Un año de Pablo y Carla", "url": "https://[DOMINIO]/" }
+  }
+  </script>
+</head>
+
+<body class="pagina-carta">
+  <a class="saltar" href="#contenido" data-bloqueable>Saltar al contenido</a>
+
+  <!-- ===== CANDADO (si entra directa a esta página) ===== -->
+  <div class="candado" id="candado" role="dialog" aria-modal="true" aria-labelledby="candado-titulo">
+    <div class="candado__caja">
+      <p class="candado__sello" aria-hidden="true">Top secret</p>
+      <h2 class="candado__titulo" id="candado-titulo">¿Eres Carla?</h2>
+      <p class="candado__texto">Esta carta solo se abre con nuestra fecha. La oficial, la que cuenta.</p>
+      <form class="candado__form" id="candado-form" novalidate>
+        <label class="sr-only" for="candado-input">Escribe nuestra fecha</label>
+        <input class="candado__input" id="candado-input" type="text" inputmode="numeric" autocomplete="off" placeholder="DD/MM" maxlength="10">
+        <button class="btn btn--tinta" type="submit">Entrar</button>
+      </form>
+      <p class="candado__mensaje" id="candado-mensaje" aria-live="polite"></p>
+      <button class="candado__pista" id="candado-pista" type="button">Necesito una pista</button>
+    </div>
+  </div>
+
+  <!-- ===== CABECERA (idéntica a index.html) ===== -->
+  <header class="cabecera" id="cabecera" data-bloqueable>
+    <div class="contenedor cabecera__inner">
+      <a class="logo" href="index.html" aria-label="Pablo y Carla, inicio">P<span class="logo__amp">&amp;</span>C</a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a href="index.html#contador">Contador</a></li>
+          <li><a href="index.html#historia">Nuestra historia</a></li>
+          <li><a href="index.html#lugares">Lugares</a></li>
+          <li><a href="index.html#razones">Razones</a></li>
+          <li><a href="index.html#quiz">Quiz</a></li>
+          <li><a href="index.html#cupones">Cupones</a></li>
+          <li><a class="nav__cta" href="carta.html" aria-current="page">Tu carta 💌</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" data-bloqueable>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="carta-hero" aria-labelledby="carta-titulo">
+      <div class="contenedor">
+        <p class="etiqueta">Correo urgente · 1 nov 2026</p>
+        <h1 class="carta-hero__titulo" id="carta-titulo">Una carta para <span class="resalte">Carla</span></h1>
+        <p class="carta-hero__sub">Ábrela despacio. O rápido, que te conozco.</p>
+
+        <div class="sobre">
+          <button class="sobre__boton" id="sobre-boton" type="button" aria-expanded="false" aria-controls="carta">
+            <span class="sobre__pliegue" aria-hidden="true"></span>
+            <span class="sobre__solapa" aria-hidden="true"></span>
+            <span class="sobre__sello" aria-hidden="true">P&amp;C</span>
+            <span class="sobre__texto">Para Carla <span class="sr-only">(pulsa para abrir la carta)</span></span>
+          </button>
+          <p class="sobre__ayuda" aria-hidden="true">Toca el sobre ↑</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CARTA =====
+         Cada párrafo empieza con una frase mía para arrancarte y una pauta entre corchetes.
+         Reescribe, borra o cambia lo que quieras: es TU carta. -->
+    <section class="contenedor" aria-label="Carta">
+      <article class="carta" id="carta" hidden tabindex="-1">
+        <p class="carta__fecha">[TU CIUDAD], 1 de noviembre de 2026</p>
+
+        <p class="carta__saludo"><span class="pendiente pendiente--linea">[SALUDO · "Carla", "Mi amor" o vuestro apodo]</span>,</p>
+
+        <p>Hace un año no tenía ni idea de lo que estaba a punto de pasarme. <span class="pendiente">[ESCRIBE · 1-2 frases sobre cómo era tu vida antes de ella, con un toque de humor. Ej.: "Yo era un chico normal que pensaba que 350 km era muchísimo…"]</span></p>
+
+        <p>Todavía me acuerdo de la azotea del Plaza Mar. <span class="pendiente">[ESCRIBE · 2-3 frases: qué sentiste ese día y en qué momento supiste que esto iba en serio.]</span></p>
+
+        <p>Dicen que la distancia es el olvido, pero se ve que nunca han hecho 350 km un viernes por la tarde con ganas de llegar. <span class="pendiente">[ESCRIBE · 2-3 frases sinceras sobre la distancia: qué es lo más difícil, qué haces cuando la echas de menos y por qué merece la pena.]</span></p>
+
+        <p><span class="pendiente">[ESCRIBE · el párrafo más importante: algo que nunca le hayas dicho en voz alta. No tiene que ser grande; tiene que ser verdad. 3-4 frases.]</span></p>
+
+        <p>Gracias por <span class="pendiente">[ESCRIBE · 3 cosas concretas que agradeces de este año. Ej.: "por aguantar mis…, por… y por…"]</span></p>
+
+        <p>De lo que viene, lo que más ganas me da es <span class="pendiente">[ESCRIBE · 1-2 frases sobre un plan o sueño juntos.]</span></p>
+
+        <p class="carta__despedida"><span class="pendiente pendiente--linea">[DESPEDIDA · cómo os despedís siempre]</span>,</p>
+        <p class="carta__firma">Pablo</p>
+
+        <p class="carta__pd"><strong>P.D.:</strong> Te debo un sushi. O me lo debes tú. Da igual: vamos.</p>
+        <p class="carta__pd"><strong>P.P.D.:</strong> <span class="pendiente pendiente--linea">[UNA BROMA INTERNA que solo entendáis vosotros]</span></p>
+
+        <div class="carta__acciones">
+          <a class="btn btn--rosa" href="#" data-whatsapp="Acabo de leer tu carta y… 🥹💗" target="_blank" rel="noopener">Contestar por WhatsApp</a>
+          <a class="btn btn--blanco" href="index.html#historia">Volver a nuestra historia</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- ===== PIE (idéntico a index.html) ===== -->
+  <footer class="pie" data-bloqueable>
+    <div class="contenedor pie__grid">
+      <div>
+        <p class="logo logo--pie">P<span class="logo__amp">&amp;</span>C</p>
+        <p class="pie__texto">Hecho a mano por Pablo, para Carla. A 350 km, o a 0, según el día.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul class="pie__nav">
+          <li><a href="index.html#historia">Nuestra historia</a></li>
+          <li><a href="index.html#lugares">Nuestros lugares</a></li>
+          <li><a href="index.html#quiz">El quiz</a></li>
+          <li><a href="carta.html" aria-current="page">Tu carta</a></li>
+        </ul>
+      </nav>
+      <p class="pie__fecha">1 · 11 · 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

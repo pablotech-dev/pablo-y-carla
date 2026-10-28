@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO adaptado a una web privada: no queremos que Google la indexe ===== -->
+  <title>Un año de Pablo y Carla · 1 de noviembre</title>
+  <meta name="description" content="Una web hecha solo para Carla: nuestro primer año, de Alicante a Granada, con 350 km que nunca fueron excusa, sushi, Latin Fest y mucho más.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://[DOMINIO]/">
+  <meta name="theme-color" content="#F7B6C8">
+
+  <!-- Open Graph / Twitter (por si compartes el enlace además del QR) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Un año de Pablo y Carla">
+  <meta property="og:description" content="Algo hecho solo para ti. Necesitarás nuestra fecha para entrar.">
+  <meta property="og:url" content="https://[DOMINIO]/">
+  <meta property="og:image" content="https://[DOMINIO]/fotos/foto-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Un año de Pablo y Carla">
+  <meta name="twitter:description" content="Algo hecho solo para ti. Necesitarás nuestra fecha para entrar.">
+  <meta name="twitter:image" content="https://[DOMINIO]/fotos/foto-01.jpg">
+
+  <!-- Favicon: corazón en SVG (sin archivo extra). Cámbialo por [FAVICON] si quieres uno propio -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%97%3C/text%3E%3C/svg%3E">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Antes de pintar: marca que hay JS y si ya se desbloqueó en esta sesión (evita parpadeos) -->
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('pc-desbloqueado') === '1') document.documentElement.classList.add('desbloqueado'); } catch (e) {}
+  </script>
+  <noscript><style>.candado{display:none!important}</style></noscript>
+  <script src="script.js" defer></script>
+
+  <!-- Datos estructurados mínimos -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Un año de Pablo y Carla",
+    "url": "https://[DOMINIO]/",
+    "inLanguage": "es-ES",
+    "description": "Web privada por nuestro primer año juntos."
+  }
+  </script>
+</head>
+
+<body>
+  <a class="saltar" href="#contenido" data-bloqueable>Saltar al contenido</a>
+
+  <!-- =========================================================
+       CANDADO DE ENTRADA (contraseña = vuestra fecha)
+       ========================================================= -->
+  <div class="candado" id="candado" role="dialog" aria-modal="true" aria-labelledby="candado-titulo">
+    <div class="candado__caja">
+      <p class="candado__sello" aria-hidden="true">Top secret</p>
+      <h2 class="candado__titulo" id="candado-titulo">¿Eres Carla?</h2>
+      <p class="candado__texto">Esta web solo se abre con nuestra fecha. La oficial, la que cuenta.</p>
+      <form class="candado__form" id="candado-form" novalidate>
+        <label class="sr-only" for="candado-input">Escribe nuestra fecha</label>
+        <input class="candado__input" id="candado-input" type="text" inputmode="numeric" autocomplete="off" placeholder="DD/MM" maxlength="10">
+        <button class="btn btn--tinta" type="submit">Entrar</button>
+      </form>
+      <p class="candado__mensaje" id="candado-mensaje" aria-live="polite"></p>
+      <button class="candado__pista" id="candado-pista" type="button">Necesito una pista</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       CABECERA + NAVEGACIÓN
+       ========================================================= -->
+  <header class="cabecera" id="cabecera" data-bloqueable>
+    <div class="contenedor cabecera__inner">
+      <a class="logo" href="index.html" aria-label="Pablo y Carla, inicio">P<span class="logo__amp">&amp;</span>C</a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul class="nav__lista">
+          <li><a href="index.html#contador">Contador</a></li>
+          <li><a href="index.html#historia">Nuestra historia</a></li>
+          <li><a href="index.html#lugares">Lugares</a></li>
+          <li><a href="index.html#razones">Razones</a></li>
+          <li><a href="index.html#quiz">Quiz</a></li>
+          <li><a href="index.html#cupones">Cupones</a></li>
+          <li><a class="nav__cta" href="carta.html">Tu carta 💌</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" data-bloqueable>
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="contenedor hero__grid">
+        <div class="hero__texto">
+          <p class="etiqueta">1·11·2025 → 1·11·2026</p>
+          <h1 class="hero__titulo" id="hero-titulo">
+            Un año de <span class="resalte">Pablo</span>
+            <span class="hero__amp" aria-hidden="true">&amp;</span><span class="sr-only">y</span>
+            <span class="resalte">Carla</span>
+          </h1>
+          <p class="hero__sub">Una web hecha solo para ti y sobre lo nuestro: 350 km que nunca han sido excusa, demasiado sushi, un festival a gritos y un beso en una azotea.</p>
+          <div class="hero__acciones">
+            <a class="btn btn--rosa" href="#historia">Empezar por el principio</a>
+            <a class="btn btn--blanco" href="carta.html">Abrir tu carta</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="polaroid polaroid--hero">
+            <div class="foto" data-label="fotos/foto-01.jpg · Vuestra foto favorita juntos">
+              <img src="fotos/foto-01.jpg" alt="Pablo y Carla juntos, sonriendo a cámara" width="800" height="1000" fetchpriority="high">
+            </div>
+            <figcaption>Nosotros, versión 2026</figcaption>
+          </figure>
+          <span class="sticker sticker--amarillo" aria-hidden="true">Edición<br>limitada<br><strong>1 unidad</strong></span>
+          <span class="sticker sticker--menta" aria-hidden="true">Fan nº1<br>de Carla</span>
+        </div>
+      </div>
+
+      <!-- Motivo recurrente: la ruta de 350 km con un corazón que va y vuelve -->
+      <div class="contenedor">
+        <div class="ruta" role="img" aria-label="Una línea discontinua de 350 kilómetros entre Pablo y Carla, con un corazón que va y vuelve">
+          <svg class="ruta__svg" viewBox="0 0 600 130" aria-hidden="true">
+            <path id="ruta-camino" class="ruta__linea" d="M40 95 C 170 5, 430 5, 560 95" />
+            <circle class="ruta__punto" cx="40" cy="95" r="12" />
+            <circle class="ruta__punto" cx="560" cy="95" r="12" />
+            <text class="ruta__nombre" x="40" y="125" text-anchor="middle">Pablo</text>
+            <text class="ruta__nombre" x="560" y="125" text-anchor="middle">Carla</text>
+            <text class="ruta__km" x="300" y="70" text-anchor="middle">350 km</text>
+            <g class="ruta__corazon">
+              <path d="M0 -4 C -3 -10 -12 -9 -12 -2 C -12 4 -4 8 0 12 C 4 8 12 4 12 -2 C 12 -9 3 -10 0 -4 Z" />
+              <animateMotion dur="7s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear">
+                <mpath href="#ruta-camino" />
+              </animateMotion>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinta de "datos oficiales" -->
+    <div class="cinta" aria-label="Datos oficiales de la pareja">
+      <div class="cinta__pista">
+        <p class="cinta__grupo">
+          <span>Distancia: 350 km</span><span>Comida oficial: sushi 🍣</span><span>Festival oficial: Latin Fest</span><span>Mirador oficial: Placeta de Carvajales</span><span>Días juntos: <b data-dias>—</b></span><span>Nivel de cariño: no cabe en esta web</span>
+        </p>
+        <p class="cinta__grupo" aria-hidden="true">
+          <span>Distancia: 350 km</span><span>Comida oficial: sushi 🍣</span><span>Festival oficial: Latin Fest</span><span>Mirador oficial: Placeta de Carvajales</span><span>Días juntos: <b data-dias>—</b></span><span>Nivel de cariño: no cabe en esta web</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         CONTADOR
+         ========================================================= -->
+    <section class="seccion" id="contador" aria-labelledby="contador-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta">Contador oficial</p>
+          <h2 class="seccion__titulo" id="contador-titulo">Desde el 21 de marzo, <em>sin pausa</em></h2>
+          <p class="seccion__intro">Esto no para. Literalmente: si te quedas mirando, verás los segundos sumando.</p>
+        </header>
+
+        <div class="reloj" id="reloj" data-reveal>
+          <div class="reloj__caja"><span class="reloj__num" data-unidad="dias">0</span><span class="reloj__etq">días</span></div>
+          <div class="reloj__caja"><span class="reloj__num" data-unidad="horas">0</span><span class="reloj__etq">horas</span></div>
+          <div class="reloj__caja"><span class="reloj__num" data-unidad="minutos">0</span><span class="reloj__etq">minutos</span></div>
+          <div class="reloj__caja reloj__caja--latido"><span class="reloj__num" data-unidad="segundos">0</span><span class="reloj__etq">segundos</span></div>
+        </div>
+
+        <div class="datos">
+          <article class="dato" data-reveal>
+            <p class="dato__num" data-desde-conocernos>0</p>
+            <p class="dato__texto">días desde que nos conocimos, el 1 de noviembre de 2025.</p>
+          </article>
+          <article class="dato dato--rosa" data-reveal>
+            <p class="dato__num" data-km>0</p>
+            <p class="dato__texto">km recorridos para vernos (ida y vuelta, por lo bajo).</p>
+          </article>
+          <article class="dato" data-reveal>
+            <p class="dato__num">350</p>
+            <p class="dato__texto">km entre tu casa y la mía. Ni uno más de excusa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HISTORIA (línea temporal)
+         ========================================================= -->
+    <section class="seccion seccion--rosa" id="historia" aria-labelledby="historia-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta">Temporada 1</p>
+          <h2 class="seccion__titulo" id="historia-titulo">Nuestro año, <em>capítulo a capítulo</em></h2>
+          <p class="seccion__intro">Del 1 de noviembre al 1 de noviembre. Con spoilers, porque ya sabemos cómo acaba: bien.</p>
+        </header>
+
+        <ol class="linea">
+          <!-- 1 nov 2025 -->
+          <li class="hito" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2025-11-01">1 nov 2025</time></p>
+              <h3 class="hito__titulo">Capítulo 1: nos conocemos</h3>
+              <p>Cómo pasó tiene guion de serie, y ese capítulo nos lo guardamos. Lo importante es que pasó.</p>
+              <p class="pendiente">[TU TEXTO · 1-2 frases: tu primera impresión de ella, sin entrar en cómo os conocisteis. Ej.: "Lo primero que pensé fue…"]</p>
+            </article>
+          </li>
+
+          <!-- Navidad: primera cita -->
+          <li class="hito" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha">Navidad 2025 · <span class="pendiente pendiente--linea">[DÍA, si lo averiguas]</span></p>
+              <h3 class="hito__titulo">Primera cita en Alicante</h3>
+              <figure class="polaroid polaroid--mini">
+                <div class="foto" data-label="fotos/foto-02.jpg · Primera cita o Navidad">
+                  <img src="fotos/foto-02.jpg" alt="Pablo y Carla en su primera cita en Alicante" width="600" height="750" loading="lazy">
+                </div>
+                <figcaption>El plan era el cine…</figcaption>
+              </figure>
+              <p>El plan era ir al cine. La realidad es que lo mejor de la noche pasó antes, en la azotea del Plaza Mar: nuestro primer beso.</p>
+              <p class="pendiente">[TU TEXTO · 2-3 frases: ¿estabas nervioso?, ¿qué pensaste justo antes?, ¿os acordáis de la peli? Un detalle que ella no sepa de ese día.]</p>
+            </article>
+          </li>
+
+          <!-- 6-8 feb -->
+          <li class="hito" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2026-02-06">6–8 feb 2026</time></p>
+              <h3 class="hito__titulo">Primeros 350 km hasta Granada</h3>
+              <figure class="polaroid polaroid--mini">
+                <div class="foto" data-label="fotos/foto-03.jpg · Primera visita a Granada">
+                  <img src="fotos/foto-03.jpg" alt="Pablo y Carla en Granada en febrero" width="600" height="750" loading="lazy">
+                </div>
+                <figcaption>Granada, round 1</figcaption>
+              </figure>
+              <p>Primera vez que fui a verte. Spoiler: no sería la última.</p>
+              <p class="pendiente">[TU TEXTO · 2 frases: cómo fue el viaje de ida y qué sentiste al verla. Si pasó algo gracioso (te perdiste, llegaste tarde…), cuéntalo.]</p>
+            </article>
+          </li>
+
+          <!-- 21 mar: oficial -->
+          <li class="hito hito--destacado" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2026-03-21">21 mar 2026</time></p>
+              <h3 class="hito__titulo">Oficialmente, nosotros 💗</h3>
+              <figure class="polaroid polaroid--mini">
+                <div class="foto" data-label="fotos/foto-04.jpg · Foto de esos días">
+                  <img src="fotos/foto-04.jpg" alt="Pablo y Carla en marzo, cuando empezaron a salir" width="600" height="750" loading="lazy">
+                </div>
+                <figcaption>Día uno del contador</figcaption>
+              </figure>
+              <p>El día en que el «nos estamos conociendo» pasó a «mi novia». Desde aquí cuenta el contador de arriba.</p>
+              <p class="pendiente">[TU TEXTO · 2-3 frases: cómo fue el momento (quién lo dijo, dónde estabais, en persona o por llamada) y cómo te sentiste después.]</p>
+            </article>
+          </li>
+
+          <!-- 11 abr -->
+          <li class="hito" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2026-04-11">11 abr 2026</time></p>
+              <h3 class="hito__titulo">Conozco a tus padres</h3>
+              <p>Nivel de nervios: alto. Resultado: prueba superada (creo).</p>
+              <p class="pendiente">[TU TEXTO · 1-2 frases con humor: lo que más te agobiaba antes y cómo fue de verdad.]</p>
+            </article>
+          </li>
+
+          <!-- 25 abr -->
+          <li class="hito" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2026-04-25">25 abr 2026</time></p>
+              <h3 class="hito__titulo">Tú en mi terreno</h3>
+              <figure class="polaroid polaroid--mini">
+                <div class="foto" data-label="fotos/foto-05.jpg · Su primera visita">
+                  <img src="fotos/foto-05.jpg" alt="Carla en su primera visita a la ciudad de Pablo" width="600" height="750" loading="lazy">
+                </div>
+                <figcaption>Ahora te tocaba a ti</figcaption>
+              </figure>
+              <p>Primera vez que vienes a verme y, de regalo, conoces a mis padres. Empate técnico.</p>
+              <p class="pendiente">[TU TEXTO · 2 frases: qué le enseñaste ese fin de semana y qué dijeron tus padres de ella después.]</p>
+            </article>
+          </li>
+
+          <!-- 18 jul -->
+          <li class="hito" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2026-07-18">18 jul 2026</time></p>
+              <h3 class="hito__titulo">Latin Fest Valencia</h3>
+              <figure class="polaroid polaroid--mini">
+                <div class="foto" data-label="fotos/foto-06.jpg · Latin Fest">
+                  <img src="fotos/foto-06.jpg" alt="Pablo y Carla en el Latin Fest de Valencia" width="600" height="750" loading="lazy">
+                </div>
+                <figcaption>Sin voz, pero felices</figcaption>
+              </figure>
+              <p>Nuestro festival favorito y tú viendo a Omar Courtz en directo. No sé quién gritó más.</p>
+              <p class="pendiente">[TU TEXTO · 2 frases: su cara cuando salió él, la canción que más cantasteis, algo que pasó esa noche.]</p>
+            </article>
+          </li>
+
+          <!-- 7-16 ago -->
+          <li class="hito" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2026-08-07">7–16 ago 2026</time></p>
+              <h3 class="hito__titulo">Diez días de camping</h3>
+              <figure class="polaroid polaroid--mini">
+                <div class="foto" data-label="fotos/foto-07.jpg · Camping">
+                  <img src="fotos/foto-07.jpg" alt="Pablo y Carla en el camping con la familia de Carla" width="600" height="750" loading="lazy">
+                </div>
+                <figcaption>Nivel convivencia: experto</figcaption>
+              </figure>
+              <p>Diez días con tu familia. Si esto no es un máster en convivencia, no sé qué lo es.</p>
+              <p class="pendiente">[TU TEXTO · 2-3 frases: el mejor momento, una anécdota con su familia y una cosa que descubriste de ella esos días.]</p>
+            </article>
+          </li>
+
+          <!-- 1 nov 2026 -->
+          <li class="hito hito--final" data-reveal>
+            <article class="hito__tarjeta">
+              <p class="hito__fecha"><time datetime="2026-11-01">1 nov 2026</time></p>
+              <h3 class="hito__titulo">Un año. Y aquí estamos.</h3>
+              <p>Tú leyendo esto y yo, seguramente, mirándote mientras lo lees.</p>
+              <p class="pendiente">[TU TEXTO · 1 frase potente para cerrar la temporada. Ej.: "Si este fue el primero, que vengan…"]</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PLAYLIST
+         ========================================================= -->
+    <section class="seccion" id="playlist" aria-labelledby="playlist-titulo">
+      <div class="contenedor playlist">
+        <div class="playlist__texto" data-reveal>
+          <p class="etiqueta">Banda sonora</p>
+          <h2 class="seccion__titulo" id="playlist-titulo">Dale al play <em>antes de seguir</em></h2>
+          <p>Nuestra playlist. Ponla de fondo y sigue bajando: el resto de la web suena mejor así.</p>
+          <p class="pendiente">[TU TEXTO · 1-2 frases: la canción que más os representa y por qué. Ej.: "Si tuviera que elegir una, sería ___, porque…"]</p>
+        </div>
+        <div class="playlist__reproductor" data-reveal>
+          <iframe title="Nuestra playlist en Spotify" src="https://open.spotify.com/embed/playlist/07cnM5FZ2UH0uqofdTqoO6?utm_source=generator" width="100%" height="380" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         LUGARES (mapa interactivo)
+         ========================================================= -->
+    <section class="seccion seccion--rosa" id="lugares" aria-labelledby="lugares-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta">Nuestro mapa</p>
+          <h2 class="seccion__titulo" id="lugares-titulo">Los sitios que <em>ya son nuestros</em></h2>
+          <p class="seccion__intro">Toca cada chincheta. La línea discontinua es la que más hemos recorrido.</p>
+        </header>
+
+        <div class="mapa-wrap" data-reveal>
+          <div class="mapa" id="mapa">
+            <div class="mapa__tierra" aria-hidden="true"></div>
+            <svg class="mapa__rutas" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <line x1="16" y1="83" x2="78.4" y2="48.7" class="mapa__linea mapa__linea--principal" />
+              <line x1="78.4" y1="48.7" x2="80.5" y2="15.6" class="mapa__linea" />
+            </svg>
+            <span class="mapa__km" aria-hidden="true">350 km</span>
+            <span class="mapa__mar" aria-hidden="true">Mar Mediterráneo</span>
+
+            <!-- Posiciones aproximadas en % (x, y). Para mover una chincheta, cambia --x y --y -->
+            <button class="pin" type="button" style="--x:78.4%; --y:48.7%" data-lugar="alicante" aria-pressed="false" aria-controls="mapa-panel">
+              <span class="pin__punto" aria-hidden="true"></span><span class="pin__nombre">Alicante</span>
+            </button>
+            <button class="pin" type="button" style="--x:16%; --y:83%" data-lugar="granada" aria-pressed="false" aria-controls="mapa-panel">
+              <span class="pin__punto" aria-hidden="true"></span><span class="pin__nombre">Granada</span>
+            </button>
+            <button class="pin" type="button" style="--x:80.5%; --y:15.6%" data-lugar="valencia" aria-pressed="false" aria-controls="mapa-panel">
+              <span class="pin__punto" aria-hidden="true"></span><span class="pin__nombre">Valencia</span>
+            </button>
+            <!-- ⚠️ Mueve esta chincheta a donde estaba el camping -->
+            <button class="pin" type="button" style="--x:42%; --y:36%" data-lugar="camping" aria-pressed="false" aria-controls="mapa-panel">
+              <span class="pin__punto" aria-hidden="true"></span><span class="pin__nombre">Camping</span>
+            </button>
+          </div>
+
+          <div class="mapa__panel" id="mapa-panel" aria-live="polite">
+            <p class="lugar lugar--vacio" id="lugar-vacio">👆 Elige una chincheta del mapa.</p>
+
+            <article class="lugar" id="lugar-alicante" hidden>
+              <p class="lugar__cuando">Navidad 2025</p>
+              <h3 class="lugar__titulo">Alicante · Azotea del Plaza Mar</h3>
+              <p>Primera cita y primer beso, antes de entrar al cine. Desde entonces, para mí las azoteas tienen otro significado.</p>
+              <p class="pendiente">[TU TEXTO · 1 frase: qué ves cuando vuelves a pasar por allí.]</p>
+              <a class="lugar__enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+Mar+2+Alicante" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+            </article>
+
+            <article class="lugar" id="lugar-granada" hidden>
+              <p class="lugar__cuando">Tu ciudad</p>
+              <h3 class="lugar__titulo">Granada · Mirador Placeta de Carvajales</h3>
+              <p>Nuestro mirador. Con la Alhambra delante, que como fondo tampoco está mal.</p>
+              <p class="pendiente">[TU TEXTO · 1-2 frases: un momento concreto que vivisteis allí (atardecer, conversación, foto…).]</p>
+              <a class="lugar__enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Mirador+Placeta+de+Carvajales+Granada" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+            </article>
+
+            <article class="lugar" id="lugar-valencia" hidden>
+              <p class="lugar__cuando">18 jul 2026</p>
+              <h3 class="lugar__titulo">Valencia · Latin Fest</h3>
+              <p>Nuestro festival favorito. Volvimos sin voz y con ganas de repetir.</p>
+              <p class="pendiente">[TU TEXTO · 1 frase: la canción del festival que ya es "vuestra".]</p>
+              <a class="lugar__enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Valencia" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+            </article>
+
+            <article class="lugar" id="lugar-camping" hidden>
+              <p class="lugar__cuando">7–16 ago 2026</p>
+              <h3 class="lugar__titulo"><span class="pendiente pendiente--linea">[NOMBRE DEL CAMPING]</span></h3>
+              <p>Diez días con tu familia, entre tiendas, chanclas y sobremesas eternas.</p>
+              <p class="pendiente">[TU TEXTO · 1-2 frases: tu recuerdo favorito del camping.]</p>
+              <a class="lugar__enlace" href="https://www.google.com/maps/search/?api=1&amp;query=[NOMBRE+DEL+CAMPING]" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         GALERÍA
+         ========================================================= -->
+    <section class="seccion" id="galeria" aria-labelledby="galeria-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta">Pruebas gráficas</p>
+          <h2 class="seccion__titulo" id="galeria-titulo">Por si alguien <em>lo dudaba</em></h2>
+        </header>
+
+        <div class="galeria">
+          <figure class="polaroid" data-reveal>
+            <div class="foto" data-label="fotos/foto-08.jpg · Mirador de Carvajales">
+              <img src="fotos/foto-08.jpg" alt="Pablo y Carla en el Mirador Placeta de Carvajales de Granada" width="600" height="750" loading="lazy">
+            </div>
+            <figcaption>Carvajales, nuestro sitio</figcaption>
+          </figure>
+          <figure class="polaroid" data-reveal>
+            <div class="foto" data-label="fotos/foto-09.jpg · Comiendo sushi">
+              <img src="fotos/foto-09.jpg" alt="Pablo y Carla comiendo sushi juntos" width="600" height="750" loading="lazy">
+            </div>
+            <figcaption>Sushi: 1 · Dieta: 0</figcaption>
+          </figure>
+          <figure class="polaroid" data-reveal>
+            <div class="foto" data-label="fotos/foto-10.jpg · Foto graciosa">
+              <img src="fotos/foto-10.jpg" alt="Foto divertida de Pablo y Carla" width="600" height="750" loading="lazy">
+            </div>
+            <figcaption><span class="pendiente pendiente--linea">[PIE: frase corta y graciosa]</span></figcaption>
+          </figure>
+          <figure class="polaroid" data-reveal>
+            <div class="foto" data-label="fotos/foto-11.jpg · Videollamada (captura)">
+              <img src="fotos/foto-11.jpg" alt="Captura de una videollamada entre Pablo y Carla" width="600" height="750" loading="lazy">
+            </div>
+            <figcaption>A 350 km, pero aquí</figcaption>
+          </figure>
+          <figure class="polaroid" data-reveal>
+            <div class="foto" data-label="fotos/foto-12.jpg · Foto que te encante de ella">
+              <img src="fotos/foto-12.jpg" alt="Carla sonriendo" width="600" height="750" loading="lazy">
+            </div>
+            <figcaption><span class="pendiente pendiente--linea">[PIE: por qué te encanta esta foto]</span></figcaption>
+          </figure>
+          <figure class="polaroid" data-reveal>
+            <div class="foto" data-label="fotos/foto-13.jpg · Selfie juntos">
+              <img src="fotos/foto-13.jpg" alt="Selfie de Pablo y Carla" width="600" height="750" loading="lazy">
+            </div>
+            <figcaption><span class="pendiente pendiente--linea">[PIE: frase corta]</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         RAZONES (tarjetas que se giran)
+         ========================================================= -->
+    <section class="seccion seccion--tinta" id="razones" aria-labelledby="razones-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta etiqueta--clara">Lo que me gusta de ti</p>
+          <h2 class="seccion__titulo" id="razones-titulo">Razones <em>(de una lista muy larga)</em></h2>
+          <p class="seccion__intro">Toca cada tarjeta para darle la vuelta. No van en orden de importancia, porque ganan todas.</p>
+        </header>
+
+        <div class="razones">
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#01</span><span class="razon__pista">Algo que haces sin darte cuenta</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #01 · un gesto o manía suya que te derrite y ella ni sabe que hace.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#02</span><span class="razon__pista">Tu risa</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #02 · descríbela: cómo suena, cuándo se le escapa, qué te provoca.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#03</span><span class="razon__pista">Cómo me cuidas a 350 km</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #03 · un mensaje, llamada o detalle concreto que te hizo sentir cerca.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#04</span><span class="razon__pista">El momento en que pensé «es ella»</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #04 · cuenta ese momento en 2 frases.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#05</span><span class="razon__pista">Algo que me has enseñado</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #05 · algo que haces o ves distinto gracias a ella.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#06</span><span class="razon__pista">Lo que más admiro de ti</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #06 · una cualidad, con un ejemplo real de cuándo la viste.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#07</span><span class="razon__pista">Cómo eres con los tuyos</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #07 · algo que viste en el camping o con sus amigos que te enamoró más.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#08</span><span class="razon__pista">Tu versión con sushi delante</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #08 · graciosa: cómo se pone cuando hay sushi, su pieza favorita, si te roba…]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#09</span><span class="razon__pista">Algo de ti que solo yo sé</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #09 · algo íntimo (pero que no te importe que se lea) que solo conoces tú.]</span></span>
+            </span>
+          </button>
+          <button class="razon" type="button" aria-pressed="false" data-reveal>
+            <span class="razon__inner">
+              <span class="razon__cara razon__frente"><span class="razon__num">#10</span><span class="razon__pista">La razón más tonta de todas</span><span class="razon__tap">Toca ↻</span></span>
+              <span class="razon__cara razon__dorso"><span class="pendiente">[RAZÓN #10 · algo absurdo y divertido. Ej.: "cómo pronuncias ___".]</span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         QUIZ
+         ========================================================= -->
+    <section class="seccion" id="quiz" aria-labelledby="quiz-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta">Examen sorpresa</p>
+          <h2 class="seccion__titulo" id="quiz-titulo">¿Cuánto sabes <em>de nosotros?</em></h2>
+          <p class="seccion__intro">Ocho preguntas, sin chuleta. Los fallos se pagan en sushi.</p>
+        </header>
+
+        <div class="quiz" id="quiz-caja" data-reveal>
+          <div class="quiz__barra" aria-hidden="true"><span id="quiz-progreso"></span></div>
+          <p class="quiz__paso" id="quiz-paso"></p>
+          <h3 class="quiz__pregunta" id="quiz-pregunta" tabindex="-1">Cargando examen…</h3>
+          <div class="quiz__opciones" id="quiz-opciones"></div>
+          <p class="quiz__feedback" id="quiz-feedback" aria-live="polite"></p>
+          <button class="btn btn--tinta quiz__siguiente" id="quiz-siguiente" type="button" hidden>Siguiente →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CUPONES
+         ========================================================= -->
+    <section class="seccion seccion--rosa" id="cupones" aria-labelledby="cupones-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta">Vales canjeables</p>
+          <h2 class="seccion__titulo" id="cupones-titulo">Cupones <em>sin caducidad</em></h2>
+          <p class="seccion__intro">Pulsa «Canjear» y me llega un WhatsApp. Sin letra pequeña (bueno, un poco).</p>
+        </header>
+
+        <div class="cupones">
+          <article class="cupon" data-cupon="sushi" data-reveal>
+            <p class="cupon__emoji" aria-hidden="true">🍣</p>
+            <h3 class="cupon__titulo">Vale por una noche de sushi</h3>
+            <p class="cupon__letra">Invito yo. Tú eliges sitio. Las últimas piezas, a negociar.</p>
+            <hr class="cupon__corte">
+            <button class="btn btn--tinta cupon__btn" type="button">Canjear</button>
+          </article>
+          <article class="cupon" data-cupon="350km" data-reveal>
+            <p class="cupon__emoji" aria-hidden="true">🚗</p>
+            <h3 class="cupon__titulo">Vale por 350 km</h3>
+            <p class="cupon__letra">Me lo mandas y voy a verte. Sujeto a calendario, no a ganas.</p>
+            <hr class="cupon__corte">
+            <button class="btn btn--tinta cupon__btn" type="button">Canjear</button>
+          </article>
+          <article class="cupon" data-cupon="videollamada" data-reveal>
+            <p class="cupon__emoji" aria-hidden="true">📱</p>
+            <h3 class="cupon__titulo">Videollamada hasta que te duermas</h3>
+            <p class="cupon__letra">Aunque te duermas a los diez minutos. Ya sabemos que pasa.</p>
+            <hr class="cupon__corte">
+            <button class="btn btn--tinta cupon__btn" type="button">Canjear</button>
+          </article>
+          <article class="cupon" data-cupon="peli" data-reveal>
+            <p class="cupon__emoji" aria-hidden="true">🎬</p>
+            <h3 class="cupon__titulo">Tú eliges la peli</h3>
+            <p class="cupon__letra">Y no protesto. Ni un suspiro. Ni una mirada.</p>
+            <hr class="cupon__corte">
+            <button class="btn btn--tinta cupon__btn" type="button">Canjear</button>
+          </article>
+          <article class="cupon" data-cupon="dia" data-reveal>
+            <p class="cupon__emoji" aria-hidden="true">👑</p>
+            <h3 class="cupon__titulo">Un día entero de planes tuyos</h3>
+            <p class="cupon__letra">Tú mandas de la mañana a la noche. Yo digo «sí, mi amor».</p>
+            <hr class="cupon__corte">
+            <button class="btn btn--tinta cupon__btn" type="button">Canjear</button>
+          </article>
+          <article class="cupon" data-cupon="extra" data-reveal>
+            <p class="cupon__emoji" aria-hidden="true">💌</p>
+            <h3 class="cupon__titulo"><span class="pendiente pendiente--linea">[TU CUPÓN: algo vuestro]</span></h3>
+            <p class="cupon__letra"><span class="pendiente pendiente--linea">[Letra pequeña graciosa]</span></p>
+            <hr class="cupon__corte">
+            <button class="btn btn--tinta cupon__btn" type="button">Canjear</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FUTURO
+         ========================================================= -->
+    <section class="seccion" id="futuro" aria-labelledby="futuro-titulo">
+      <div class="contenedor futuro">
+        <header class="seccion__cabecera" data-reveal>
+          <p class="etiqueta">Temporada 2</p>
+          <h2 class="seccion__titulo" id="futuro-titulo">Lo que viene <em>(ya renovada)</em></h2>
+        </header>
+        <ul class="futuro__lista">
+          <li data-reveal><span class="futuro__check" aria-hidden="true"></span>Que los 350 km pasen a ser 0.</li>
+          <li data-reveal><span class="futuro__check" aria-hidden="true"></span>Encontrar el mejor sushi de España. Investigación en curso.</li>
+          <li data-reveal><span class="futuro__check" aria-hidden="true"></span>Latin Fest 2027. Mismo sitio, más gritos.</li>
+          <li data-reveal><span class="futuro__check" aria-hidden="true"></span><span class="pendiente pendiente--linea">[PLAN · un viaje que queráis hacer juntos]</span></li>
+          <li data-reveal><span class="futuro__check" aria-hidden="true"></span><span class="pendiente pendiente--linea">[PLAN · algo pequeño y cotidiano que te ilusione: cocinar juntos, un domingo sin planes…]</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         LLAMADA A LA CARTA
+         ========================================================= -->
+    <section class="seccion seccion--rosa" aria-labelledby="carta-cta-titulo">
+      <div class="contenedor">
+        <a class="carta-cta" href="carta.html" data-reveal>
+          <span class="carta-cta__sobre" aria-hidden="true">💌</span>
+          <div class="carta-cta__texto">
+            <span class="etiqueta">Correo urgente</span>
+            <h2 class="carta-cta__titulo" id="carta-cta-titulo">Te he escrito una carta</h2>
+            <span class="carta-cta__sub">Está en su propia página, como debe ser. Ábrela cuando estés tranquila.</span>
+          </div>
+          <span class="carta-cta__flecha" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SORPRESA FINAL (botón que huye)
+         ========================================================= -->
+    <section class="seccion sorpresa" id="sorpresa" aria-labelledby="sorpresa-titulo">
+      <div class="contenedor">
+        <header class="seccion__cabecera seccion__cabecera--centro" data-reveal>
+          <p class="etiqueta">Una última cosa</p>
+          <h2 class="seccion__titulo" id="sorpresa-titulo">Hagas lo que hagas, <em>no pulses esto</em></h2>
+        </header>
+        <div class="sorpresa__zona" id="sorpresa-zona">
+          <button class="btn btn--rosa sorpresa__btn" id="sorpresa-btn" type="button">No pulses este botón</button>
+        </div>
+        <div class="sorpresa__secreto" id="sorpresa-secreto" hidden tabindex="-1">
+          <p class="sorpresa__grande">Sabía que lo pulsarías. Por eso te quiero.</p>
+          <p class="pendiente">[MENSAJE SECRETO · 2-3 frases que solo veréis aquí. Puede ser una broma interna, una promesa o una pista de otra sorpresa (un plan, un regalo físico…).]</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       PIE
+       ========================================================= -->
+  <footer class="pie" data-bloqueable>
+    <div class="contenedor pie__grid">
+      <div>
+        <p class="logo logo--pie">P<span class="logo__amp">&amp;</span>C</p>
+        <p class="pie__texto">Hecho a mano por Pablo, para Carla. A 350 km, o a 0, según el día.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <ul class="pie__nav">
+          <li><a href="index.html#historia">Nuestra historia</a></li>
+          <li><a href="index.html#lugares">Nuestros lugares</a></li>
+          <li><a href="index.html#quiz">El quiz</a></li>
+          <li><a href="carta.html">Tu carta</a></li>
+        </ul>
+      </nav>
+      <p class="pie__fecha">1 · 11 · 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
