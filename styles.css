@@ -647,6 +647,63 @@ main { display: block; }
 .polaroid--mini:hover { transform: rotate(0) scale(1.03); }
 .polaroid--mini figcaption { font-size: 1.3rem; }
 
+/* Entrada de cine (capítulo de la primera cita) */
+.entrada {
+  display: flex;
+  width: min(300px, 100%);
+  margin: var(--esp-2) auto var(--esp-3);
+  background: var(--amarillo);
+  border: var(--borde);
+  border-radius: var(--radio-s);
+  box-shadow: var(--sombra-solida);
+  transform: rotate(-3deg);
+  transition: transform var(--rebote);
+}
+.entrada:hover { transform: rotate(0) scale(1.03); }
+.entrada__cuerpo { flex: 1; padding: .9rem 1rem .8rem; }
+.entrada__cine {
+  margin: 0;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.entrada__peli {
+  margin: .1rem 0 .6rem;
+  font-family: var(--f-display);
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  font-size: 1.7rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1;
+  color: var(--rosa-700);
+}
+.entrada__datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .4rem .8rem;
+  margin: 0;
+}
+.entrada__datos dt { font-size: .66rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; opacity: .75; }
+.entrada__datos dd { margin: 0; font-family: var(--f-mano); font-size: 1.3rem; font-weight: 700; line-height: 1; }
+.entrada__matriz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  padding: .4rem;
+  border-left: 2px dashed var(--tinta);
+  background: var(--rosa-300);
+  border-radius: 0 8px 8px 0;
+  font-family: var(--f-mano);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+}
+.hito:nth-child(even) .entrada { transform: rotate(2.5deg); }
+
 .hito--destacado .hito__tarjeta { background: var(--rosa-300); }
 .hito--destacado::before { background: var(--rosa-700); width: 30px; height: 30px; left: 1px; }
 .hito--final .hito__tarjeta { background: var(--tinta); color: var(--papel); }

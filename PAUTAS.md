@@ -23,7 +23,7 @@ Tip: abre la web, pulsa F12 → Consola y verás cuántos textos entre corchetes
 | Historia (index.html) | 9 + el día de la primera cita | 2-3 frases por capítulo. Pon al menos un detalle que ella no sepa. |
 | Playlist | 1 | La canción "vuestra" y por qué. |
 | Mapa | 5 + nombre del camping | Cortos: un recuerdo por sitio. |
-| Galería | 3 pies de foto | Máximo 6-7 palabras. Que hagan gracia. |
+| Galería | 3 pies de foto (los otros 9 ya tienen frase; cámbiala si quieres) | Máximo 6-7 palabras. Que hagan gracia. |
 | Razones | 10 | La frase de la tarjeta ya da el tema. 1-3 frases cada una. |
 | Cupones | 1 cupón vuestro | Algo que solo tenga sentido entre vosotros. |
 | Futuro | 2 planes | Uno grande (viaje) y uno pequeño (un domingo cualquiera). |
@@ -47,25 +47,20 @@ En **index.html**:
 
 ## 4. Fotos
 
-Crea una carpeta `fotos` al lado de index.html con estos nombres (en .jpg, en vertical queda mejor):
+Ya están todas en la carpeta `fotos`, recortadas y reducidas. La primera cita no tiene foto: en su lugar hay una entrada de cine dibujada. Si algún día quieres cambiar una foto, sustituye el archivo por otro con el mismo nombre (en vertical, unos 1200 px de alto).
 
-| Archivo | Qué foto |
-|---|---|
-| foto-01.jpg | Vuestra favorita juntos (portada) |
-| foto-02.jpg | Primera cita / Navidad en Alicante |
-| foto-03.jpg | Primera visita a Granada (febrero) |
-| foto-04.jpg | De cuando empezasteis (marzo) |
-| foto-05.jpg | Su primera visita a tu ciudad (abril) |
-| foto-06.jpg | Latin Fest |
-| foto-07.jpg | Camping |
-| foto-08.jpg | Mirador Placeta de Carvajales |
-| foto-09.jpg | Comiendo sushi |
-| foto-10.jpg | Una graciosa |
-| foto-11.jpg | Captura de videollamada |
-| foto-12.jpg | Una de ella que te encante |
-| foto-13.jpg | Un selfie juntos |
+Dónde va cada una:
 
-Mientras falte una foto, su hueco muestra el nombre de archivo que va ahí. Reduce las fotos a unos 1200 px de lado para que cargue rápido en el móvil.
+| Archivo | Sección | Foto |
+|---|---|---|
+| foto-01 | Portada | Beso de noche junto al mar |
+| foto-03 | Febrero, Granada | Cepillos de dientes en el espejo |
+| foto-04 | 22 de marzo | Al hombro frente al espejo |
+| foto-05 | Tú en mi zona (abril) | Piscina en Orihuela |
+| foto-14 | Conozco a tus padres | Paseo de fiestas con su madre |
+| foto-06 | Latin Fest | Selfie con gafas en el estadio |
+| foto-07 | Camping | Playa, tumbados en las toallas |
+| foto-08 … foto-20 | Galería (12 fotos) | Mirador de Granada, sushi ×2, gorros, cena, ella en la cala, selfie desde arriba, mascarilla, fiesta de verano, granizados con su madre, atardecer y escaleras de la cala |
 
 ## 5. Publicarla y hacer el QR
 
