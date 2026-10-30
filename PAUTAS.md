@@ -12,15 +12,17 @@
 
 ## 2. Qué rellenar
 
-Todos los huecos están en amarillo con un ✏️ y la pauta entre corchetes. Escribe tu texto y **borra la clase `pendiente`** (y los corchetes) de cada uno para que se vea normal.
+Cada hueco es un texto entre corchetes con la pauta dentro, por ejemplo `[TU TEXTO · 2 frases: …]`. **Sustituye todo, corchetes incluidos, por tu texto** y listo: no hay que tocar nada más del código.
 
-Tip: abre la web, pulsa F12 → Consola y verás cuántos huecos te quedan en cada página.
+Busca `[` en el editor (Ctrl+F) para ir de uno en uno. Ojo: ya no se ven en amarillo, así que antes de dársela comprueba que no quede ningún corchete.
+
+Tip: abre la web, pulsa F12 → Consola y verás cuántos textos entre corchetes quedan en cada página.
 
 | Sección | Huecos | Consejo |
 |---|---|---|
 | Historia (index.html) | 9 + el día de la primera cita | 2-3 frases por capítulo. Pon al menos un detalle que ella no sepa. |
 | Playlist | 1 | La canción "vuestra" y por qué. |
-| Mapa | 4 + nombre del camping | Cortos: un recuerdo por sitio. |
+| Mapa | 5 + nombre del camping | Cortos: un recuerdo por sitio. |
 | Galería | 3 pies de foto | Máximo 6-7 palabras. Que hagan gracia. |
 | Razones | 10 | La frase de la tarjeta ya da el tema. 1-3 frases cada una. |
 | Cupones | 1 cupón vuestro | Algo que solo tenga sentido entre vosotros. |
@@ -33,9 +35,8 @@ Para la carta, la primera frase de cada párrafo ya está escrita para arrancart
 ## 3. Datos que tienes que poner
 
 En **script.js**, arriba del todo (`CONFIG`):
-- `telefono`: tu WhatsApp con prefijo, sin espacios (ej. `34600111222`). Así los cupones y la respuesta a la carta te llegan a ti directamente.
 - `numeroDeViajes`: cuántas veces os habéis visto viajando uno de los dos. Se usa para calcular los km recorridos.
-- `claves`: la contraseña. Ahora es el 21/03 (vale `2103`, `21/03`, `21032026`…). Ojo: es un candado de broma; quien mire el código puede verla.
+- `claves`: la contraseña. Ahora es el 22/03 (vale `2203`, `22/03`, `22032026`…). Ojo: es un candado de broma; quien mire el código puede verla.
 
 En **carta.html**: `[TU CIUDAD]` en la fecha de la carta.
 

@@ -6,13 +6,13 @@
 /* ---------- 0. CONFIGURACIÓN (cambia aquí tus datos) ---------- */
 const CONFIG = {
   // Fecha en que empezasteis a salir (contador principal)
-  fechaJuntos: new Date(2026, 2, 21, 0, 0, 0),      // 21 de marzo de 2026 (los meses empiezan en 0)
+  fechaJuntos: new Date(2026, 2, 22, 0, 0, 0),      // 22 de marzo de 2026 (los meses empiezan en 0)
   // Fecha en que os conocisteis
   fechaConocernos: new Date(2025, 10, 1, 0, 0, 0),  // 1 de noviembre de 2025
 
   // Contraseñas válidas del candado (solo cuentan los números que escriba).
   // OJO: esto es un "candado de broma"; cualquiera que mire el código puede verla.
-  claves: ['2103', '21032026', '210326'],
+  claves: ['2203', '22032026', '220326'],
 
   // Kilómetros entre vuestras casas y número de viajes (de cualquiera de los dos).
   km: 350,
@@ -20,7 +20,7 @@ const CONFIG = {
 
   // Tu WhatsApp con prefijo de país y sin espacios, p. ej. '34600111222'.
   // Si lo dejas así, WhatsApp le dejará elegir a quién mandarlo.
-  telefono: '[TELÉFONO]'
+  telefono: '+34630007380'
 };
 
 /* ---------- 1. UTILIDADES ---------- */
@@ -81,7 +81,7 @@ function lluviaDeCorazones(cantidad = 36) {
     'Casi… (mentira, no estás ni cerca)',
     'Piensa en primavera 🌸',
     'Te doy otra pista: es de marzo.',
-    'Vale, la pista definitiva: el 21.'
+    'Vale, la pista definitiva: el 22.'
   ];
   let intentos = 0;
 
@@ -307,7 +307,7 @@ function lluviaDeCorazones(cantidad = 36) {
       p: '¿Dónde fue nuestro primer beso?',
       o: ['En la puerta del cine', 'En la azotea del Plaza Mar', 'En la playa del Postiguet', 'En el mirador de Carvajales'],
       c: 1,
-      bien: '¡Eso es! Antes de entrar al cine. La peli fue lo de menos.',
+      bien: '¡Eso es! Antes de entrar al cine.',
       mal: 'Nop: fue en la azotea del Plaza Mar, antes del cine.'
     },
     {
@@ -319,23 +319,23 @@ function lluviaDeCorazones(cantidad = 36) {
     },
     {
       p: '¿Quién conoció antes a los padres del otro?',
-      o: ['Pablo, el 11 de abril', 'Carla, el 25 de abril', 'Los dos el mismo día', 'Todavía nadie'],
+      o: ['Pablo', 'Carla', 'Los dos el mismo día', 'Todavía nadie'],
       c: 0,
-      bien: 'Correcto: yo fui el valiente primero. Tú, dos semanas después.',
+      bien: 'Correcto: yo probé las tortas fritas el primer dia ;)',
       mal: 'Fui yo, el 11 de abril. Tú viniste el 25 a conocer a los míos.'
     },
     {
-      p: '¿A quién viste en directo en el Latin Fest?',
-      o: ['Bad Bunny', 'Omar Courtz', 'Myke Towers', 'Rauw Alejandro'],
+      p: '¿A quién disfrutaste más en el Latin Fest?',
+      o: ['Beéle', 'Omar Courtz', 'Myke Towers', 'ROA'],
       c: 1,
-      bien: '¡Omar Courtz! Todavía me duelen los oídos de tus gritos.',
-      mal: '¿Cómo que no? ¡Omar Courtz! Tu cantante favorito.'
+      bien: '¡Omar Courtz! Aún me replanteo si grabé bien los vídeos....',
+      mal: '¿Cómo que no? ¡Omar Courtz! Ya me lo dicen los tiktoks que me mandas...'
     },
     {
       p: '¿Cuál es la comida oficial de esta pareja?',
       o: ['Pizza', 'Hamburguesa', 'Sushi', 'Lo que diga Carla'],
       c: 2,
-      bien: 'Sushi, obviamente. 🍣',
+      bien: 'Obviamente, y más si es después de pasar la tarde en el Nevada.',
       mal: 'Sushi. Siempre sushi. (Aunque lo de "lo que diga Carla" también es bastante cierto.)'
     },
     {
@@ -354,10 +354,10 @@ function lluviaDeCorazones(cantidad = 36) {
     },
     {
       p: '¿Qué día empezamos a salir oficialmente?',
-      o: ['1 de noviembre', '14 de febrero', '21 de marzo', '25 de abril'],
+      o: ['1 de noviembre', '14 de febrero', '22 de marzo', '25 de abril'],
       c: 2,
-      bien: '21 de marzo. Es tu contraseña, así que me lo esperaba 😏',
-      mal: '¡El 21 de marzo! Si hasta lo usaste para entrar en la web…'
+      bien: '22 de marzo. Es tu contraseña, así que me lo esperaba 😏',
+      mal: '¡El 22 de marzo! Si hasta lo usaste para entrar en la web…'
     }
   ];
 
@@ -418,14 +418,14 @@ function lluviaDeCorazones(cantidad = 36) {
     let titulo, texto;
     if (aciertos === PREGUNTAS.length) {
       titulo = 'Matrícula de honor 🏆';
-      texto = 'Sabes más de nosotros que yo. Premio: un beso (canjeable en persona).';
+      texto = 'Sabes todito sobre nosotros. Premio: un beso (canjeable en persona).';
       lluviaDeCorazones(40);
     } else if (aciertos >= 6) {
       titulo = 'Notable alto';
-      texto = 'Te perdono los fallos si me invitas a sushi. Bueno, aunque no me invites.';
+      texto = 'Te perdono los fallos si me invitas a cenar. Bueno, aunque no me invites.';
     } else if (aciertos >= 3) {
       titulo = 'Aprobado raspado';
-      texto = 'Hay que repasar. ¿Te parece si repasamos en persona?';
+      texto = 'Hay que repasar. ¿Repasamos en persona?';
     } else {
       titulo = '¿Seguro que eres Carla? 🤨';
       texto = 'Es broma. O no. Repite el examen, que esto no puede quedar así.';
@@ -481,7 +481,7 @@ function lluviaDeCorazones(cantidad = 36) {
     if (canjeados.includes(id)) marcar(cupon);
 
     $('.cupon__btn', cupon).addEventListener('click', () => {
-      const titulo = $('.cupon__titulo', cupon).textContent.replace(/^\s*✏️\s*/, '').trim();
+      const titulo = $('.cupon__titulo', cupon).textContent.trim();
       const texto = `Pablo, canjeo mi cupón: «${titulo}» 💌\n¿Cuándo lo hacemos?`;
       window.open(enlaceWhatsApp(texto), '_blank', 'noopener');
 
@@ -566,7 +566,10 @@ function lluviaDeCorazones(cantidad = 36) {
 })();
 
 /* ---------- 14. AVISO PARA PABLO: TEXTOS PENDIENTES ---------- */
+// Cuenta los textos que siguen entre corchetes [ ] (abre la consola con F12 para verlo)
 (function pendientes() {
-  const n = $$('.pendiente').length;
-  if (n) console.info(`✏️ Quedan ${n} textos por escribir en esta página. Búscalos por la clase "pendiente" y bórrala al terminar cada uno.`);
+  const raiz = $('main');
+  if (!raiz) return;
+  const n = (raiz.textContent.match(/\[[^\]]+\]/g) || []).length;
+  if (n) console.info(`✏️ Quedan ${n} textos entre corchetes por sustituir en esta página.`);
 })();

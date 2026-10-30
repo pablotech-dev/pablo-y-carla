@@ -199,24 +199,6 @@ em { font-style: italic; }
   z-index: -1;
 }
 
-/* Textos que Pablo tiene que escribir */
-.pendiente {
-  display: block;
-  padding: .55rem .8rem;
-  margin-block: .3rem;
-  background: repeating-linear-gradient(-45deg, #FFF3C4 0 10px, #FFEBA3 10px 20px);
-  border: 2px dashed var(--tinta);
-  border-radius: var(--radio-s);
-  font-family: var(--f-texto);
-  font-size: .9rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.45;
-  color: var(--tinta);
-}
-.pendiente::before { content: "✏️ "; }
-.pendiente--linea { display: inline; padding: .1rem .4rem; margin: 0; }
-
 /* Pegatinas */
 .sticker {
   position: absolute;
@@ -655,7 +637,6 @@ main { display: block; }
   font-weight: 700;
   font-size: .85rem;
 }
-.hito__fecha .pendiente--linea { color: var(--tinta); }
 .hito__titulo { font-size: clamp(1.6rem, 5.4vw, 2.1rem); }
 .polaroid--mini {
   width: min(240px, 80%);
@@ -722,8 +703,8 @@ main { display: block; }
 }
 .mapa__km {
   position: absolute;
-  left: 47%; top: 66%;
-  transform: translate(-50%, -50%) rotate(-28deg);
+  left: 42%; top: 72%;
+  transform: translate(-50%, -50%) rotate(-21deg);
   padding: .1rem .6rem;
   background: var(--amarillo);
   border: var(--borde);
@@ -864,7 +845,6 @@ main { display: block; }
   font-size: .95rem;
   line-height: 1.4;
 }
-.razon__dorso .pendiente { font-size: .8rem; }
 .razon__num { font-family: var(--f-display); font-size: 2rem; font-weight: 900; font-style: italic; line-height: 1; }
 .razon__pista { margin-top: auto; font-family: var(--f-display); font-weight: 700; font-size: 1.12rem; line-height: 1.1; }
 .razon__tap { margin-top: .5rem; font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
@@ -1012,7 +992,6 @@ main { display: block; }
   background: var(--blanco);
   box-shadow: 2px 2px 0 var(--tinta);
 }
-.futuro__lista .pendiente { font-size: .95rem; }
 
 /* ---------- 18. LLAMADA A LA CARTA ---------- */
 .carta-cta {
