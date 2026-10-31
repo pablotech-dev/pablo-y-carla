@@ -727,7 +727,7 @@ main { display: block; }
 .mapa {
   position: relative;
   width: 100%;
-  aspect-ratio: 7 / 6;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background-color: var(--mar);
   background-image: radial-gradient(rgba(52, 21, 31, .12) 1px, transparent 1.6px);
@@ -742,7 +742,7 @@ main { display: block; }
   background-color: var(--blanco);
   background-image: radial-gradient(var(--rosa-200) 1.2px, transparent 1.8px);
   background-size: 18px 18px;
-  clip-path: polygon(0 0, 86% 0, 84% 30%, 86% 46%, 74% 62%, 52% 100%, 0 100%);
+  clip-path: polygon(0 0, 87% 0, 86% 24%, 90% 44%, 89% 68%, 66% 83%, 57% 100%, 0 100%);
 }
 .mapa__rutas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .mapa__linea {
@@ -760,8 +760,8 @@ main { display: block; }
 }
 .mapa__km {
   position: absolute;
-  left: 42%; top: 72%;
-  transform: translate(-50%, -50%) rotate(-21deg);
+  left: 39%; top: 70%;
+  transform: translate(-50%, -50%) rotate(-27deg);
   padding: .1rem .6rem;
   background: var(--amarillo);
   border: var(--borde);
@@ -772,7 +772,7 @@ main { display: block; }
 }
 .mapa__mar {
   position: absolute;
-  right: 4%; bottom: 6%;
+  right: 3%; bottom: 4%;
   font-family: var(--f-mano);
   font-size: clamp(1.1rem, 4vw, 1.6rem);
   font-weight: 700;
@@ -1313,6 +1313,7 @@ main { display: block; }
   .playlist { grid-template-columns: 1fr 1fr; gap: var(--esp-6); }
 
   .mapa-wrap { grid-template-columns: 1.3fr 1fr; align-items: center; gap: var(--esp-5); }
+  .mapa { aspect-ratio: 7 / 6; }
 
   /* Línea temporal alterna */
   .linea::before { left: 50%; transform: translateX(-50%); }
